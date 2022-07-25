@@ -1,16 +1,14 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MO_Erasoft.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class ARF01
+    public class ARF01C
     {
         
         [StringLength(10)]
-        public string CUST { get; set; }
+        public string BUYER_CODE { get; set; }
 
         
         [StringLength(30)]
@@ -28,8 +26,7 @@ namespace MO_Erasoft.Models
         public string TLP { get; set; }
 
         
-        //[StringLength(30)] remark change to 100 by fauzi for 82Cart url Website
-        [StringLength(100)]
+        [StringLength(30)]
         public string PERSO { get; set; }
 
         [StringLength(15)]
@@ -38,17 +35,6 @@ namespace MO_Erasoft.Models
         public double TERM { get; set; }
 
         public double LIMIT { get; set; }
-
-        [StringLength(100)]
-        public string TOKEN { get; set; }
-
-        [StringLength(100)]
-        public string REFRESH_TOKEN { get; set; }
-
-        [StringLength(50)]
-        public string API_CLIENT_U { get; set; }
-
-        public string API_CLIENT_P { get; set; }
 
         [StringLength(1)]
         public string PKP { get; set; }
@@ -100,8 +86,6 @@ namespace MO_Erasoft.Models
 
         public bool TIDAK_HIT_UANG_R { get; set; }
 
-        public DateTime? TGL_EXPIRED { get; set; }
-
         [StringLength(10)]
         public string Sort1_Area { get; set; }
 
@@ -117,7 +101,7 @@ namespace MO_Erasoft.Models
         [StringLength(10)]
         public string Sort5_Area { get; set; }
 
-        [StringLength(30)]
+        [StringLength(10)]
         public string Sort1_Cust { get; set; }
 
         [StringLength(10)]
@@ -159,10 +143,10 @@ namespace MO_Erasoft.Models
         [StringLength(10)]
         public string Attr4_Area { get; set; }
 
-        [StringLength(35)]
+        [StringLength(10)]
         public string Attr5_Area { get; set; }
 
-        //[StringLength(50)]
+        [StringLength(50)]
         public string Kode { get; set; }
 
         [StringLength(2)]
@@ -176,17 +160,15 @@ namespace MO_Erasoft.Models
         [StringLength(30)]
         public string USERNAME { get; set; }
 
-        [StringLength(20)]
-        public string PASSWORD { get; set; }
-
         [StringLength(10)]
         public string GD1 { get; set; }
 
-       
+        
         [StringLength(7)]
         public string KODEPOS { get; set; }
 
-        
+        //remark by calvin 7 nov 2018, mba rahma minta email bisa kosong
+        //
         [StringLength(50)]
         public string EMAIL { get; set; }
 
@@ -198,39 +180,10 @@ namespace MO_Erasoft.Models
         [StringLength(2)]
         public string KODEPROV { get; set; }
 
-        public int TOP { get; set; }
+        [StringLength(50)]
+        public string NAMA_KABKOT { get; set; }
 
-        [StringLength(100)]
-        public string API_KEY { get; set; }
-
-        [StringLength(1)]
-        public string STATUS_API { get; set; }
-
-        public int? BRANCH_ID_ACCURATE { get; set; }
-
-        [StringLength(100)]
-        public string BANK_NO_ACCURATE { get; set; }
-        [StringLength(200)]
-        public string BRANCH_NAME_ACCURATE { get; set; }
-        public DateTime? TOKEN_EXPIRED { get; set; }//add 28 mei 2021, for shopee
-
-        //add by nurul 19/8/2021, chat 
-        [StringLength(100)]
-        public string TOKEN_CHAT { get; set; }
-
-        [StringLength(100)]
-        public string REFRESH_TOKEN_CHAT { get; set; }
-
-        public DateTime? TOKEN_EXPIRED_CHAT { get; set; }//add 28 mei 2021, for shopee
-
-        [StringLength(1)]
-        public string STATUS_API_CHAT { get; set; }
-
-        [StringLength(1)]
-        public string STATUS_SYNC_CHAT { get; set; }
-
-        public DateTime? TGL_EXPIRED_CHAT { get; set; }
-        //end add by nurul 19/8/2021,
-        
+        [StringLength(50)]
+        public string NAMA_PROV { get; set; }
     }
 }
