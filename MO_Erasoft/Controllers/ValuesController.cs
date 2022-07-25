@@ -1517,6 +1517,8 @@ namespace MO_Erasoft.Controllers
                                 STF09A_API_Bundle.stf09a_list = listSTF09A;
                                 //STF09A_API_Bundle.stf09a = STF09A;
 
+                                //Tambahan Integrasi Branch.
+
                                 //var B = ERAMODbContext.ARF01.Where(a => a.CUST == "00001").FirstOrDefault();
                                 var A = JsonConvert.SerializeObject(STF09A_API_Bundle);
                                 if (!string.IsNullOrEmpty(A))
